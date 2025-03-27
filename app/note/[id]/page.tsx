@@ -88,11 +88,11 @@ const NotePage = () => {
     // Simulate loading data
     const timer = setTimeout(() => {
       setLoading(false);
+      setNote(MOCK_NOTE);
     }, 300);
     
     return () => clearTimeout(timer);
   }, [id]);
-  setNote(MOCK_NOTE);
   if (loading) {
     return (
       <AppLayout>
